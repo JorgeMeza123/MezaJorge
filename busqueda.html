@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Autopartes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagenes/logo.png">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="vision.html">Visión</a></li>
+                <li><a href="mision.html">Misión</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
+                <li><a href="webmaster.html">Información del Webmaster</a></li>
+            </ul>
+        </nav>
+        <div class="log">
+            <img src="imagenes/log.png">
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <center>
+        <h1>BUSQUEDA DE REFACCIONES</h1>
+        </center>
+        <br><br>
+        <table>
+            <tr>
+                <th>Marca del auto</th>
+                <td><input list="browsers" name="marcas">
+                <datalist id="browsers">
+                  <option value="Chevrolet">
+                  <option value="Ford">
+                  <option value="Dodge">
+                  <option value="Hyundai">
+                  <option value="Nissan">
+                  <option value="Renault">
+                  <option value="Jeep">
+                  <option value="Susuki">
+                  <option value="Jac">
+                  <option value="Mg">
+                  <option value="Mercedes-Benz">
+                  <option value="BMW">
+                  <option value="Cadillac">
+                  <option value="Honda">
+                  <option value="Mazda">
+                  <option value="Toyota">
+                  <option value="Mitsubishi">
+                  <option value="Opel">
+                  <option value="Audi">
+                  <option value="Volvo">
+                  <option value="Volkswagen">
+                  <option value="Subaru">
+                </datalist>
+            </td>
+            </tr>
+            <tr>
+                <th>Tipo de motor</th>
+                <td><input list="motor" name="motor">
+                <datalist id="motor">
+                      <option value="3 cilindros 1.2 lt">
+                      <option value="4 cilindro 1.4 lt">
+                      <option value="4 cilindro 1.6 lt">
+                      <option value="4 cilindros 1.8 lt">
+                      <option value="4 cilindros 2.0 lt">
+                      <option value="4 cilindros 2.4 lt">
+                      <option value="6 cilindros 2.8 lt">
+                      <option value="6 cilindros 3.2 lt">
+                      <option value="8 cilindros 5.0 lt">
+                      <option value="8 cilindros 5.4 lt">
+                      <option value="8 cilindros 5.7 lt">
+                      <option value="8 cilindros 6.2 lt">
+                      <option value="8 cilindros 6.7">
+                      <option value="8 cilindros 7.2">
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <th>Año del auto</th>
+                <td><input type="int" name="año"></td>
+            </tr>
+            <tr>
+                <th>Version del motor</th>
+                <td><input list="Version" name="Version">
+                    <datalist id="Version">
+                        <option value="lt">
+                            <option value="ls">
+                            <option value="R">
+                            <option value="RS">
+                            <option value="SS">
+                            <option value="GT">
+                            <option value="S">
+                            <option value="V-TEC">
+                            <option value="SRT">
+                            <option value="R/T">
+                            <option value="Supercargado">
+                            <option value="Turbocargado">
+                        </datalist>
+                    </td>
+               </tr>
+            <tr>
+                <th>Nombre de la Refaccion</th>
+                <td><input type="text" name="refaccion"></td>
+            </tr>
+            <tr>
+                <th>Marca de la Refaccion</th>
+                <td><input list="Refaccion" name="Refaccion">
+                    <datalist id="Refaccion">
+                        <option value="LTH">
+                            <option value="BOSCH">
+                            <option value="URREA">
+                            <option value="MIKELS">
+                            <option value="WALKER">
+                            <option value="FAST10">
+                            <option value="FELPRO">
+                            <option value="FTC">
+                            <option value="NATIONAL">
+                            <option value="PRESTONE">
+                            <option value="Pro One">
+                            <option value="MOOG">
+                        </datalist>
+                    </td>
+           </tr>
+            <tr>
+                <th>Tipo de material</th>
+                <td><input list="Material" name="Material">
+                    <datalist id="Material">
+                        <option value="Sintetico">
+                            <option value="Plastico">
+                            <option value="Aluminio">
+                            <option value="Metal Forjado">
+                            <option value="Platino">
+                            <option value="Iridio">
+                        </datalist>
+                </td>
+            </tr>
+            <tr>
+                <th>Precio</th>
+                <td><input type="float" name="precio"></td>
+            </tr>
+            <tr>
+                <th>Cantidad en Stock</th>
+                <td><input type="int" name="stock"></td>
+            </tr>
+        </table>
+        <center>
+        <button id="reset">Enviar</button>
+       </center>
+
+    <script>
+        document.getElementById("reset").addEventListener("click", function() {
+            location.reload();
+        });
+    </script>
+    </div>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="registro.html">Registro de Usuarios</a></li>
+            <li><a href="busqueda.html">Búsqueda de Refacción</a></li>
+            <li><a href="ventas.html">Ventas</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li><a href="empleados.html">Empleados</a></li>
+            <li><a href="tabla-registro.html">Tabla-Registro</a></li>
+            <li><a href="tabla-busqueda.html">Tabla-Busqueda</a></li>
+            <li><a href="tabla-ventas.html">Tabla-Ventas</a></li>
+            <li><a href="tabla-clientes.html">Tabla-Clientes</a></li>
+            <li><a href="tabla-empleados.html">Tabla-empleados</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>&copy; 2023 Tienda de Autopartes <br> Jorge Arturo Meza Mendez 5-J</p>
+    </footer>
+</body>
+</html>
