@@ -4,3 +4,4 @@
 ###Tabla inventario
 
 ##Base de datos en phpmyadmin
+![]()
